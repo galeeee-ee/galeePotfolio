@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffb6c1; /* Pink background color */
+    }
+    .hearts::before,
+    .hearts::after {
+      content: "♥";
+      position: absolute;
+      color: #ff1493; /* Heart color */
+      font-size: 10px;
+      animation: hearts-float 8s linear infinite;
+    }
+
+    .hearts::before {
+      top: -10px;
+      left: 50%;
+    }
+
+    .hearts::after {
+      top: -10px;
+      left: 80%;
+    }
+
+    @keyframes hearts-float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="slide3" class="slide hearts">
+  <h2>Social Info</h2>
+  <p>You can find me on:</p>
+  <ul>
+    <li>Facebook: Alyssa Deposoy</li>
+    <li>Instagram: galeeee_ee</li>
+    <!-- Add more social info as needed -->
+  </ul>
+  <button class="prev" onclick="prevSlide()">Previous</button>
+  <button class="next" onclick="nextSlide()">Next</button>
+</div>
+
+</body>
+</html>
